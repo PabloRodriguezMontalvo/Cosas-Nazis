@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aplicacion_Aprendizaje", "Aplicacion_Aprendizaje\Aplicacion_Aprendizaje.csproj", "{164B2E9E-8CE0-419B-8AA5-8CAAF02FAAAB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{164B2E9E-8CE0-419B-8AA5-8CAAF02FAAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{164B2E9E-8CE0-419B-8AA5-8CAAF02FAAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{164B2E9E-8CE0-419B-8AA5-8CAAF02FAAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{164B2E9E-8CE0-419B-8AA5-8CAAF02FAAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
