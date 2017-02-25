@@ -10,7 +10,7 @@ namespace Aplicacion_Aprendizaje.iUnitOfWork
 {
     public class UnitOfWork : IUnitOfWork, IDisposable
     {
-        UsuariosEntities context = new UsuariosEntities(); //TKPruebasEntities es el contexto de Entity Framework (Model.Context)
+        UsuariosEntities1 context = new UsuariosEntities1(); //TKPruebasEntities es el contexto de Entity Framework (Model.Context)
 
         private RepositoryUsuarios repoUsuarios;
 
@@ -26,7 +26,20 @@ namespace Aplicacion_Aprendizaje.iUnitOfWork
                 return repoUsuarios;
             }
         }
+        private RepositoryEstados repoEstados;
 
+        public RepositoryEstados RepoEstados
+        {
+            get
+            {
+
+                if (repoEstados == null)
+                {
+                    repoEstados = new RepositoryEstados(context);
+                }
+                return repoEstados;
+            }
+        }
         public void Commit()
         {
             context.SaveChanges();

@@ -21,7 +21,7 @@ namespace Aplicacion_Aprendizaje.Models.ViewModels
             {
                 id = id,
                 edad = edad,
-                //estado = estado,
+                estado = estado,
                 nombre = nombre
             };
             return datos;
@@ -32,16 +32,16 @@ namespace Aplicacion_Aprendizaje.Models.ViewModels
             id = modelo.id;
             nombre = modelo.nombre;
             edad = modelo.edad;
-            //estado = modelo.estado;
-            //try
-            //{
-            //    estado_descripcion = modelo.Estados.descripcion;
-            //}
-            //catch (Exception)
-            //{
-                
-            //    throw;
-            //}
+            estado = modelo.estado;
+            try
+            {
+                estado_descripcion = modelo.Estado1.descripcion;
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
         public void UpdateBaseDatos(Usuarios modelo)
@@ -49,7 +49,7 @@ namespace Aplicacion_Aprendizaje.Models.ViewModels
             modelo.id = id;
            modelo.nombre = nombre;
             modelo.edad = edad;
-            //modelo.estado = estado;
+            modelo.estado = estado;
         }
 
         public object[] GetKeys()

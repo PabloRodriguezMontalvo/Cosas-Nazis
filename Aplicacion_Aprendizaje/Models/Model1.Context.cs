@@ -13,10 +13,10 @@ namespace Aplicacion_Aprendizaje.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class UsuariosEntities : DbContext
+    public partial class UsuariosEntities1 : DbContext
     {
-        public UsuariosEntities()
-            : base("name=UsuariosEntities")
+        public UsuariosEntities1()
+            : base("name=UsuariosEntities1")
         {
         }
     
@@ -25,6 +25,8 @@ namespace Aplicacion_Aprendizaje.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<Estado> Estado { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Usuarios> Usuarios { get; set; }
     }
 }

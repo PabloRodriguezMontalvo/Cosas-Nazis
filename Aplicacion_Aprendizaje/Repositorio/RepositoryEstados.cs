@@ -7,9 +7,9 @@ using Aplicacion_Aprendizaje.Models.ViewModels;
 
 namespace Aplicacion_Aprendizaje.Repositorio
 {
-    public partial class RepositoryUsuarios : RepositoryBase<Usuarios,UsuariosViewModel>
+    public partial class RepositoryEstados : RepositoryBase<Estado, EstadosViewModel>
     {
-        public RepositoryUsuarios(UsuariosEntities1 context)
+        public RepositoryEstados(UsuariosEntities1 context)
             : base(context)
         {
 

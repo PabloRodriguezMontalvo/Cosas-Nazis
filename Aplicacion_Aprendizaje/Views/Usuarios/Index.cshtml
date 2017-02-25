@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Aplicacion_Aprendizaje.Models.Usuarios>
+﻿@model IEnumerable<Aplicacion_Aprendizaje.Models.ViewModels.UsuariosViewModel>
 
 @{
     ViewBag.Title = "Index";
@@ -17,6 +17,9 @@
         <th>
             @Html.DisplayNameFor(model => model.edad)
         </th>
+        <th>
+            @Html.DisplayNameFor(model => model.estado_descripcion)
+        </th>
         <th></th>
     </tr>
 
@@ -27,6 +30,9 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.edad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.estado_descripcion)
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.id }) |

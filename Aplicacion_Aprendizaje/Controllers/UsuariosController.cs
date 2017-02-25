@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Aplicacion_Aprendizaje.iUnitOfWork;
+using Aplicacion_Aprendizaje.Models;
+using Aplicacion_Aprendizaje.Models.ViewModels;
 
 namespace Aplicacion_Aprendizaje.Controllers
 {
@@ -16,7 +18,17 @@ namespace Aplicacion_Aprendizaje.Controllers
         {
             using (var unitOfWork = new UnitOfWork())
             {
-                var users = unitOfWork.RepoUsuarios.Fetch().ToList();
+                var newuser= new UsuariosViewModel();
+                newuser.edad = 10;
+                newuser.nombre = "Pepe";
+var newestado= new EstadosViewModel();
+                newestado.descripcion = "JAJA";
+                unitOfWork.RepoEstados.Add(newestado);
+                unitOfWork.Commit();
+                newuser.estado = newestado.id;
+                unitOfWork.RepoUsuarios.Add(newuser);
+                unitOfWork.Commit();
+                var users = unitOfWork.RepoUsuarios.Get().ToList();
 
                 return View(users);
 
